@@ -35,7 +35,7 @@ public class TestGreeter {
   }
 
     @Test
-  public void greetShouldIncludeGreetingMessageByUmakanth() {
+  public void greetShouldIncludeGreetingMessageUmakanth() {
     String someone = "World, Thanks you making me Happy";
 
     assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
@@ -45,5 +45,11 @@ public class TestGreeter {
     String someone = "Hello World, This is umakanth test";
 
     assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+  }
+  Test
+  public void greetShouldIncludeGreetingByMessage() {
+    String someone = "Hello World, This is failure test";
+
+    assertThat(greeter.greet(someone).length(), is(lessThan(someone.length())));
   }
 }
